@@ -46,6 +46,7 @@ public final class DesktopConnection implements Closeable {
         LocalSocket controlSocket;
         if (tunnelForward) {
             LocalServerSocket localServerSocket = new LocalServerSocket(SOCKET_NAME);
+            Ln.i("pid:" + android.os.Process.myPid());
             Ln.i("wait for connection");
             try {
                 videoSocket = localServerSocket.accept();
