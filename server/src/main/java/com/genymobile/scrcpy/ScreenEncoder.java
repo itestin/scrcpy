@@ -149,6 +149,8 @@ public class ScreenEncoder implements Device.RotationListener {
         format.setInteger(MediaFormat.KEY_I_FRAME_INTERVAL, iFrameInterval);
         // display the very first frame, and recover from bad quality when no new frames
         format.setLong(MediaFormat.KEY_REPEAT_PREVIOUS_FRAME_AFTER, REPEAT_FRAME_DELAY_US); // µs
+        format.setInteger(MediaFormat.KEY_LEVEL, MediaCodecInfo.CodecProfileLevel.AVCLevel3);
+        format.setInteger(MediaFormat.KEY_PROFILE, MediaCodecInfo.CodecProfileLevel.AVCProfileBaseline);
         if (maxFps > 0) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 format.setFloat(MediaFormat.KEY_MAX_FPS_TO_ENCODER, maxFps);
