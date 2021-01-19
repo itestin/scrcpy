@@ -200,6 +200,8 @@ scrcpy -m 1024
 scrcpy -m 800
 ```
 
+You could also try another [encoder](README.md#encoder).
+
 
 ## Command line on Windows
 
@@ -230,5 +232,8 @@ scrcpy --prefer-text --turn-screen-off --stay-awake
 ```
 
 Then just double-click on that file.
+
+You could also edit (a copy of) `scrcpy-console.bat` or `scrcpy-noconsole.vbs`
+to add some arguments.
 
 [show file extensions]: https://www.howtogeek.com/205086/beginner-how-to-make-windows-show-file-extensions/
